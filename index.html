@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Array Methods Demo</title>
+</head>
+<body>
+    <nav>
+        <h1>Array Methods</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Images</a></li>
+            <li><a href="#">Videos</a></li>
+        </ul>
+    </nav>
+
+    <button onclick="showArrayLength()">Array length()</button>
+    <p id="arrayLengthOutput"></p>
+
+    <button onclick="showArrayToString()">Array toString()</button>
+    <p id="arrayToStringOutput"></p>
+
+    <button onclick="showArrayPop()">Array pop()</button>
+    <p id="arrayPopOutput"></p>
+
+    <script>
+        var myArray = [1, 2, 3, 4, 5];
+
+        function showArrayLength() {
+            var output = "Array length: " + myArray.length;
+            document.getElementById("arrayLengthOutput").innerHTML = output;
+        }
+
+        function showArrayToString() {
+            var output = "Array as a string: " + myArray.toString();
+            document.getElementById("arrayToStringOutput").innerHTML = output;
+        }
+
+        function showArrayPop() {
+            var poppedElement = myArray.pop();
+            var output = "Popped element: " + poppedElement + "<br>Updated Array: " + myArray.toString();
+            document.getElementById("arrayPopOutput").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
